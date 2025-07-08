@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emulation CHip 8</title>
+    <link rel = "stylesheet" href = "style.css">
+    
+</head>
+<body>
+    <h1>CHIP-8 Emulator</h1>
+
+    <div class="controls">
+    <input type="file" id="romInput" accept=".ch8,.rom">
+    <div id="status">Current ROM: INVADERS</div>
+    <button id="resetBtn">Reset Game</button>
+    </div>
+
+    <canvas></canvas>
+
+    <script type="module" src="scripts/chip8.js"></script>
+</body>
+</html>

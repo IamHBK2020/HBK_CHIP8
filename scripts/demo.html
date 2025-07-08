@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Animation</title>
+  <style>
+    /* Styling the animated box */
+    #box {
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+<body>
+  <!-- The blue box -->
+  <div id="box"></div>
+
+  <script>
+
+    let startTime = null;
+    let progress = null;
+    let toggle = false;
+    let animateID = null;
+
+    let currenTop = 50;
+
+
+    function step(timestamp){
+        if(!startTime || progress > 400 ){ //if starttime is not true and progress > 400
+            startTime = timestamp;
+        }
+        //diving by 10 so as to make smaller steps
+        progress = (timestamp - startTime)/ 10; 
+        let newTop = currenTop + progress;
+        box.style.top = newTop + 'px'; 
+
+        if(progress < 400 && toggle){
+            animateID = requestAnimationFrame(step); //keep on getting updated ID for cancelling mid animation
+        }else{
+            toggle = false;
+            currentTop = Math.min(newTop, 400); // get the current position of the box less than 400
+        }
+        //else end the animation
+        
+    }
+
+    function toggleAnimation(){
+        if(!toggle){
+            toggle = true;
+           animateID = requestAnimationFrame(step); //get ID of the first frame
+        }else{
+            toggle = false;
+            cancelAnimationFrame(animateID);
+        }
+    }
+
+    document.addEventListener('click', toggleAnimation);
+  </script>
+</body>
+</html>
+
+

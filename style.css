@@ -1,0 +1,78 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: #fff;
+    font-family: 'Nothing Font (5x7)';
+    font-size: large;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+canvas {
+    border: 4px solid #00FF00;
+    background-color: #1e1e1e;
+    box-shadow: 0 0 20px #00ff88;
+    image-rendering: pixelated;
+    width: 640px;                                     /* matches your scale settings */
+    height: 320px;
+}
+
+h1 {
+    position: absolute;
+    top: 60px;
+    color: #00FF00;
+    font-size: 2em;
+    text-shadow: 0 0 10px #00FF00;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#romInput {
+    background-color: #1e1e1e;
+    color: #00FF00;
+    border: 2px solid #00FF00;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#romInput:hover {
+    box-shadow: 0 0 10px #00FF00;
+}
+
+#status {
+    color: #00FF00;
+    font-size: 1.2em;
+    text-shadow: 0 0 5px #00FF00;
+}
+
+
+#resetBtn {
+    background-color: #1e1e1e;
+    color: #00FF00;
+    border: 2px solid #00FF00;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+}
+#resetBtn:hover {
+    box-shadow: 0 0 10px #00FF00;
+}
