@@ -1,3 +1,17 @@
+#footer, .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    color: #00FF00;
+    font-size: 1.1em;
+    font-family: monospace;
+    text-shadow: 0 0 5px #00FF00;
+}
+
+
+
 /* Reset default browser styles */
 * {
     margin: 0;
@@ -25,6 +39,33 @@ canvas {
     image-rendering: pixelated;
     width: 640px;                                     /* matches your scale settings */
     height: 320px;
+    display: block;
+}
+
+.instructions-box {
+    background: #222;
+    border: 2px solid #00FF00;
+    border-radius: 8px;
+    color: #00FF00;
+    padding: 18px 24px;
+    margin-left: 0;
+    min-width: 180px;
+    font-family: monospace;
+    box-shadow: 0 0 10px #00ff88;
+    margin-top: 0;
+}
+.instructions-box h2 {
+    margin-bottom: 10px;
+    color: #00FF00;
+    font-size: 1.3em;
+    text-shadow: 0 0 5px #00FF00;
+}
+.instructions-box pre {
+    margin: 0;
+    font-family: monospace;
+    color: #00FF00;
+    background: none;
+    border: none;
 }
 
 h1 {
